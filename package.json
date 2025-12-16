@@ -1,0 +1,35 @@
+{
+  "name": "projetomodeloorangehrm",
+  "version": "1.0.0",
+  "description": "Inicialize o projeto Node.js\r ```Bash\r npm init -y\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:chrome": "cypress run --browser chrome",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:clear": "rm -rf allure-results allure-report || del /s /q allure-results allure-report",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "test:allure": "cypress run && allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "relatorio": "cypress run && allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thayse-Dias/projetomodeloOrangeHRM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Thayse-Dias/projetomodeloOrangeHRM/issues"
+  },
+  "homepage": "https://github.com/Thayse-Dias/projetomodeloOrangeHRM#readme",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.36.0",
+    "cypress": "^15.7.1"
+  }
+}
